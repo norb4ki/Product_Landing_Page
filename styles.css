@@ -1,0 +1,83 @@
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-text-dark:#264653;
+    --color-back-light:#E9C46A;
+    --color-back-medium:#F4A261;
+    --color-back-dark:#E76F51;
+    --color-highlight:#2A9D8F;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+header{
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    max-height: 200px;
+    background: var(--color-back-dark);
+    align-items: center;
+    justify-content:space-between;
+    position: fixed;
+    width: 100%;
+}
+
+header div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    color: var(--color-text-dark);
+}
+
+.logo{
+   margin: 2rem;
+   width: 3rem;
+   height: 3rem;
+}
+
+header h1{
+    color: var(--color-text-dark);
+    font-size: 3rem;
+    margin-left: 1rem;
+}
+
+nav{
+    color: var(--color-text-dark);
+    margin-right: 2rem;
+}
+
+a{
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    font-size: 2rem;
+    color: inherit;
+}
+
+body{
+    background: var(--color-back-light);
+}
+
+#order{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rem;
+    align-items: center;
+}
+
+
