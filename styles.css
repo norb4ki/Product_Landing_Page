@@ -12,17 +12,18 @@
     --color-back-medium:#F4A261;
     --color-back-dark:#E76F51;
     --color-highlight:#2A9D8F;
-}
-
-html {
     font-size: 62.5%;
 }
 
+html {
+
+    color: var(--color-text-dark);
+}
+
 header{
-    top: 0;
+    top:0;
     display: flex;
     flex-direction: row;
-    max-height: 200px;
     background: var(--color-back-dark);
     align-items: center;
     justify-content:space-between;
@@ -44,9 +45,9 @@ body{
 }
 
 .logo{
-   margin: 2rem;
-   width: 3rem;
-   height: 3rem;
+    margin: 2rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 header h1{
@@ -71,13 +72,177 @@ a{
 
 body{
     background: var(--color-back-light);
+    margin-top: 15rem;
 }
 
 #order{
     display: flex;
     flex-direction: column;
-    margin-top: 20rem;
+    align-items: center;
+}
+input{
+    background: var(--color-back-medium);
+    padding: 1rem;
+    height: 2rem;
+    width: 30rem;
+    border: none;
+    color:var(--color-text-dark);
+
+}
+button, .submit{
+    display: block;
+    min-height:30px;
+    margin:0.5rem auto;
+    padding:0.5rem;
+    background: var(--color-back-dark);
+    border:none;
+    border-radius: 10px;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: inherit;
+    cursor: pointer;
+}
+section{
+    margin: 5rem auto;
+}
+
+.features{
+    display: grid;
+    grid-template-columns: 100px 500px;
+    justify-content: center;
+    align-items: center;
+    row-gap: 3rem;
+
+
+}
+.icon{
+    width: 100px;
+    grid-column: 1;
+}
+.feature-description{
+    max-width: 500px;
+    grid-column: 2;
+    margin-left: 3rem;
+}
+
+iframe{
+    display: block;
+    margin: 30px auto;
+}
+
+#pricing{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
 
+.product-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    margin: 3rem;
+    border: 3px solid var(--color-back-dark);
+}
 
+#pricing h2, .product-block h1, .product-block p{
+    text-align: center;
+}
+.block-header{
+    height: min-content;
+    width: 100%;
+    background-color: var(--color-back-dark);
+}
+.paper-image{
+    padding: 1rem;
+    width: 25rem;
+}
+
+.product-block p{
+    max-width: 23rem;
+}
+
+button:hover{
+    background-color: var(--color-back-medium);
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+#order{
+    top: 8rem;
+}
+
+footer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    background-color: var(--color-back-dark);
+    width: 80%;
+    margin: 0 auto;
+    text-align: right;
+    padding: 1rem;
+}
+
+#privacy-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+@media screen and (max-width: 900px) {
+    header, #nav-bar, #pricing{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    header{
+        min-height: min-content;
+    }
+    #nav-bar{
+        gap:0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-block{
+        width: 50%;
+    }
+
+    #order h1{
+        text-align: center;
+        max-width: 75%;
+        margin-bottom: 1rem;
+    }
+
+
+    .features{
+        grid-template-columns: 100px 300px;
+        margin: 0 auto;
+    }
+    header div{
+        justify-content: space-around;
+    }
+    header h1{
+        margin-left: 0;
+    }
+
+    body{
+        margin-top:200px;
+    }
+}
